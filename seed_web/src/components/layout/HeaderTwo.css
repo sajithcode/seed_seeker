@@ -1,0 +1,9 @@
+input[type="text"]{
+    width: 601px;
+    height: 50px;
+    border-radius: 26px;
+}
+
+::placeholder{
+    @apply text-center;
+}
