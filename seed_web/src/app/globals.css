@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type="text"],
+
+{
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    margin:20px 0;
+    padding: 0 25px;
+    
+}
+
+
+.hero-section{
+    height: 427px;
+    background-image: url('/heroImage.png');
+}
+
+.vegetableCard{
+    background-image: url('/vegetable-seeds.png');
+    width: 550px;
+    height:300px;
+    background-size: cover;
+    border-radius: 20px;
+    
+    
+}
+
+.foodCard{
+    width: 550px;
+    height:300px;
+    border-radius: 20px;
+    background-image: url('/fruit-seeds.png');
+    background-size: cover;
+    
+    
+
+    
+}
+
+.login-main-img{
+    width:100%;
+    height:250px;
+    background-image: url("/dark.png");
+}
+
+.footer ul li{
+    margin-top:10px;
+}
+
+
