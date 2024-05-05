@@ -9,8 +9,8 @@ export default function Register(){
                 <h1 className="text-5xl text-white">My Account</h1>
             </div>
             <div className='mx-20 flex flex-wrap justify-evenly my-8'>
-                <div>
-                    <h2 className='text-3xl flex items-center justify-start mb-5'>REGISTER</h2>
+                <div className='flex-1'>
+                    <h2 className='text-3xl flex items-center mb-5'>REGISTER</h2>
                     <form>
                         <div>
                             <label>Username</label> <br/>
@@ -30,11 +30,12 @@ export default function Register(){
                         </div>
                     </form>
                 </div>
-                <div className='text-3xl p-5 lg:p-0'>
+                <div className='hidden lg:block lg:border-2 mr-6'></div>
+                <div className='text-3xl p-5 lg:p-0 flex-1'>
                     <h2 className='text-center mb-5'>LOGIN</h2>
-                    <p className='text-sm w-[512px]'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+                    <p className='text-sm text-justify'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
                     <div className=' text-center'>
-                        <Link href="/login"><button className='text-sm text-center register-btn w-[111px] h-[35px] rounded-[30px]'>LOGIN</button></Link>
+                        <Link href="/login"><button className='text-sm text-center register-btn w-[111px] h-[35px] rounded-[30px] my-4'>LOGIN</button></Link>
                     </div>
                     
                 </div>
