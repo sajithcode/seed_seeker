@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import './HeaderTwo.js';
+import './HeaderTwo.css';
 
 export default function HeaderTwo(){
     return(

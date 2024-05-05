@@ -11,6 +11,7 @@ export default function FeaturedItems(){
                 <ProductCard ProductName={'Chia Seeds'} quantity={'20000-50000 kg'} productLocation={'NuwaraEliya'}/>
                 <ProductCard ProductName={'Pumkin Seeds'} quantity={'20000-50000 kg'} productLocation={'Ratnapura'}/>
                 <ProductCard ProductName={'Chia Seeds'} quantity={'20000-50000 kg'} productLocation={'Badulla'}/>
+                
             </div>
         </section>
     );
