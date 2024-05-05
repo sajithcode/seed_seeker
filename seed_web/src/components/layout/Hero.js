@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero(){
     return(
         <section className="hero-section flex items-center justify-items-center  px-20 text-black">
@@ -9,7 +11,7 @@ export default function Hero(){
             </h1>
             <div className="mt-6">
                 <button className="bg-colorThree text-white px-10 my-2 py-2 text-sm lg:text-lg rounded-full font-semibold mr-4">FIND</button>
-                <button className="bg-black text-white px-10 py-2 text-sm lg:text-lg rounded-full font-semibold">Register</button>
+                <Link href="/register"><button className="bg-black text-white px-10 py-2 text-sm lg:text-lg rounded-full font-semibold">Register</button></Link>
             </div>
             </div>
             
