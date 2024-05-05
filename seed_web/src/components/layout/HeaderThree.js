@@ -8,7 +8,7 @@ export default function HeaderThree(){
                 <li><Link href="/">HOME</Link></li>
                 <li><Link href="/review-seller">REVIEW SELLER</Link></li>
                 <li><Link href="/shop">SHOP</Link></li>
-                <li><Link href="/contactus">CONTACT US</Link></li>
+                <li><Link href="/contact_us">CONTACT US</Link></li>
 
             </ul>
         </section>
