@@ -21,7 +21,7 @@ export default function Login(){
                         </div>
 
                         <div>
-                            <button className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]">REGISTER</button>
+                            <button className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]">LOGIN</button>
                         </div>
                     </form>
                 </div>
