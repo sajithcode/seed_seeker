@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import './Register.css'
+import './register.css'
 
 
 export default function Register(){
