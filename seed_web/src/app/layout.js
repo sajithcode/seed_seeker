@@ -3,6 +3,7 @@ import "./globals.css";
 import HeaderOne from "@/components/layout/HeaderOne";
 import HeaderTwo from "@/components/layout/HeaderTwo";
 import Footer from "@/components/layout/Footer";
+import HeaderThree from "@/components/layout/HeaderThree";
 
 
 const inter = Fira_Sans({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <HeaderOne />
         <HeaderTwo />
+        <HeaderThree />
         {children}
         <Footer />
         </body>

@@ -10,7 +10,7 @@ export default function Hero(){
             & Review<br />
             </h1>
             <div className="mt-6">
-                <button className="bg-colorThree text-white px-10 my-2 py-2 text-sm lg:text-lg rounded-full font-semibold mr-4">FIND</button>
+            <Link href="/shop"><button className="bg-colorThree text-white px-10 my-2 py-2 text-sm lg:text-lg rounded-full font-semibold mr-4">FIND</button></Link>
                 <Link href="/register"><button className="bg-black text-white px-10 py-2 text-sm lg:text-lg rounded-full font-semibold">Register</button></Link>
             </div>
             </div>

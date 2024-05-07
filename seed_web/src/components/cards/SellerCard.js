@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function SellerCard({name, sellerID, productLocation}){
     return(
         <div>
-            <div className='bg-gray-200  rounded-[25px] py-3'>
+            <div className='bg-gray-200  rounded-[25px] py-3 my-4'>
                 <div className='text-right'>
                 <button className='bg-colorThree text-white rounded-[10px] w-[121px] h-[26px]'>{productLocation}</button>
                 </div>
