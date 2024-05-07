@@ -5,7 +5,7 @@ export default function ProductCard({ProductName, quantity, productLocation}){
         <div>
             <div className='bg-gray-200  rounded-[25px] py-3 my-4'>
                 <div className='text-right'>
-                <button className='bg-colorThree text-white rounded-[10px] w-[121px] h-[26px]'>{productLocation}</button>
+                    <button className='bg-colorThree text-white rounded-[10px] w-[121px] h-[26px]'>{productLocation}</button>
                 </div>
                 
                 <Image src={'/chia-seeds.png'} width={353} height={250}/>

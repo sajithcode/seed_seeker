@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import './test.css'
 
@@ -21,7 +22,11 @@ export default function Login(){
                         </div>
 
                         <div>
-                            <button className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]">LOGIN</button>
+                            <button type='submit' className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]">LOGIN</button> <br/>
+                            <button type='submit' className="border text-center w-[300px] h-[50px] py-2 rounded-[30px] mt-3 flex justify-center items-center gap-2">
+                                <Image src={'/google-icon.png'} width={28} height={28} />
+                                Login with Google
+                                </button>
                         </div>
                     </form>
                 </div>
