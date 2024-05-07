@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import './Register.css'
+import './register.css'
 
 
 export default function Register(){
@@ -26,7 +26,7 @@ export default function Register(){
                         </div>
 
                         <div>
-                            <button className="bg-colorThree text-center  w-[300px] h-[50px] py-2 rounded-[30px]">REGISTER</button>
+                            <button type='submit' className="bg-colorThree text-center  w-[300px] h-[50px] py-2 rounded-[30px]">REGISTER</button>
                         </div>
                     </form>
                 </div>
