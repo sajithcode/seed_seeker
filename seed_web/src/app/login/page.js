@@ -8,8 +8,8 @@ export default function Login(){
             <div className="login-main-img flex items-center justify-center">
                 <h1 className="text-5xl text-white">My Account</h1>
             </div>
-            <div className='mx-20 flex flex-wrap justify-evenly my-8'>
-                <div className='flex-1'>
+            <div className='mx-10 flex flex-wrap justify-evenly my-8'>
+                <div className='flex-1 lg:mx-10'>
                     <h2 className='text-3xl flex items-center justify-start mb-5'>LOGIN</h2>
                     <form>
                         <div>
