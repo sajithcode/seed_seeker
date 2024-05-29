@@ -1,7 +1,24 @@
+"use client";
 import Link from 'next/link';
 import './test.css'
+import { useState } from 'react';
+import {signIn} from "next-auth/react";
 
 export default function Login(){
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loginInProgress, setLoginInProgress] = useState(false);
+
+    async function handleFormSubmit(ev) {
+        ev.preventDefault();
+        setLoginInProgress(true);        
+
+        await signIn('credentials', {email, password});
+        
+        setLoginInProgress(false);
+
+    }
+
     return(
         <section className=''>
             <div className="login-main-img flex items-center justify-center">
@@ -10,18 +27,27 @@ export default function Login(){
             <div className='mx-20 flex flex-wrap justify-evenly my-8'>
                 <div className='flex-1'>
                     <h2 className='text-3xl flex items-center justify-start mb-5'>LOGIN</h2>
-                    <form>
+                    <form onSubmit={handleFormSubmit}>
                         <div>
                             <label>Username or email address</label> <br/>
-                            <input className='border rounded' type="text"  id="username"  placeholder="Username" required/>
+                            <input className='border rounded' 
+                            type="text"  id="email"  placeholder="" required
+                            name='email'
+                            value={email} onChange={ev => setEmail(ev.target.value)}
+                            disabled={loginInProgress}/>
                         </div>
                         <div>
                             <label>Password</label> <br/>
-                            <input className="border rounded" type="password" id="password"  placeholder="Password"  required/>
+                            <input className="border rounded"
+                             type="password" id="password"  placeholder="Password"  required
+                             value={password} onChange={ev => setPassword(ev.target.value)}
+                             name='password'
+                             disabled={loginInProgress}/>
                         </div>
 
                         <div>
-                            <button className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]">LOGIN</button>
+                            <button className="bg-colorThree text-center w-[300px] h-[50px] py-2 rounded-[30px]"
+                            disabled={loginInProgress}>LOGIN</button>
                         </div>
                     </form>
                 </div>

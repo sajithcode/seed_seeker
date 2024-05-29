@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-input[type="text"],
+input[type="text"]
 
 {
     width: 300px;
@@ -52,4 +52,12 @@ input[type="text"],
     margin-top:10px;
 }
 
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="password"]:disabled {
+    @apply bg-gray-300 cursor-not-allowed;
+}
 
+button[type="submit"]:disabled, .submit:disabled {
+    @apply cursor-not-allowed bg-yellow-200;
+}
