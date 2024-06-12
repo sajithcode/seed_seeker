@@ -17,8 +17,10 @@ useEffect(() => {
         <section>
             <div className='flex gpa-4 justify-evenly flex-wrap mx-20'>
 
-                {createdUser.map(user => (
-                    <SellerCard name={user.username}
+                {createdUser.map((user, index) => (
+                    <SellerCard
+                    key={index} 
+                    name={user.username}
                     sellerID = {user._id}
                     productLocation = {"HongKong"}></SellerCard>
 

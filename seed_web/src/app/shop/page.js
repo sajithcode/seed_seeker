@@ -20,8 +20,9 @@ export default function ShopPage({seeds}){
         <section>
             <div className='flex gpa-4 justify-evenly flex-wrap mx-20'> 
 
-            {seedItems.map(item => (
+            {seedItems.map((item, index) => (
                 <ProductCard
+                    key={index}
                     ProductName={
                         item.seedType
                     } 
