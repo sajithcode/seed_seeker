@@ -7,7 +7,7 @@ export default function ReviewSeller(){
     const [createdUser, setCreatedUser] = useState([]);
 
 useEffect(() => {
-        fetch('/api/getUsers')
+        fetch('/api/getSellers')
         .then(res => {res.json()
         .then(data => setCreatedUser(data))
         .catch(error => console.error('Error fetching users:', error));

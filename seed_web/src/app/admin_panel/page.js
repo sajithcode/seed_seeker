@@ -22,7 +22,7 @@ export default function Register(){
         setUserCreated(false);
         const response = await fetch('/api/register', {
             method: 'POST',
-            body: JSON.stringify({type: 'user', username, email, role, password}),
+            body: JSON.stringify({type: 'seller', username, email, password}),
             headers: {
                 'Content-type': 'application/json'
             }
@@ -37,7 +37,7 @@ export default function Register(){
     return(
         <div>
             <div className="login-main-img flex items-center justify-center">
-                <h1 className="text-5xl text-white">My Account</h1>
+                <h1 className="text-5xl text-white">Admin Panel</h1>
             </div>
             <div className='mx-20 flex flex-wrap justify-evenly my-8'>
                 <div className='flex-1'>
@@ -85,10 +85,14 @@ export default function Register(){
                 </div>
                 <div className='hidden lg:block lg:border-2 mr-6'></div>
                 <div className='text-3xl p-5 lg:p-0 flex-1'>
-                    <h2 className='text-center mb-5'>LOGIN</h2>
-                    <p className='text-sm text-justify'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+                    <h2 className='text-center mb-5'>Make Changes</h2>
+                    <p className='text-sm text-justify'>
+                        Register a seller as an authorized seller by the department of
+                        agrarian services. Clicking the button below allows the admin to
+                        manually make changes in the database.
+                        </p>                
                     <div className=' text-center'>
-                        <Link href="/login"><button className='text-sm text-center register-btn w-[111px] h-[35px] rounded-[30px] my-4'>LOGIN</button></Link>
+                        <Link href="https://cloud.mongodb.com/v2/66388c5c09c8fb371a299b49#/overview"><button className='text-sm text-center register-btn w-[111px] h-[35px] rounded-[30px] my-4'>Make changes</button></Link>
                     </div>
                     
                 </div>

@@ -2,9 +2,11 @@ import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import mongoose from "mongoose";
 import {User} from '@/app/models/User';
+import {Seller} from '@/app/models/Seller'
 import bcrypt from 'bcrypt';
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "@/libs/mongoConnect";
+import SellerCard from "@/components/cards/SellerCard";
 
 const handler = NextAuth({
     secret: process.env.SECRET,
@@ -23,18 +25,26 @@ const handler = NextAuth({
     // e.g. domain, username, password, 2FA token, etc.
     // You can pass any HTML attribute to the <input> tag through the object.
     credentials: {
-      username: { label: "Username", type: "text", placeholder: "jsmith" },
+      username: { label: "name", type: "text", placeholder: "jsmith" },
       email: {label: "Email", type: "text", placeholder: ""},
       password: { label: "Password", type: "password" },
-      role: {label: "Role", type: "text", placeholder: ""}
+      type: {label: "Type", type: "text", placeholder: "user or seller"}
     },
     async authorize(credentials, req) {
 
       const email = credentials?.email;
       const password = credentials?.password;
+      const type = credentials?.type;
+
 
       await mongoose.connect(process.env.MONGO_URL);
-      const user = await User.findOne({email: email});
+
+      let user;
+      if (type === 'seller') {
+          user = await Seller.findOne({email: email});
+      } else {
+        user = await User.findOne({email: email});
+      }
       const passwordOk = user &&  bcrypt.compareSync(password, user.password);
 
       console.log({passwordOk});
