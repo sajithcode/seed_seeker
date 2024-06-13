@@ -51,8 +51,8 @@ const SeedForm = () => {
             <div className='pb-4 text-center'>
             {productcreate && (
                         <div className='bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert text-center"'>
-                            <span className='font-bold'>Product created.</span><br/> Now you can {' '}
-                             <Link className='underline' href={'/shop'}>Shop &raquo;</Link>
+                            <span className='font-bold'>Product created.</span><br/> Now you can check your orders{' '}
+                             <Link className='underline' href={'/orders'}>Shop &raquo;</Link>
                         </div>
                     )}
                     {error && (

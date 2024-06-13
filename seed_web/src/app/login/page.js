@@ -13,7 +13,7 @@ export default function Login(){
         ev.preventDefault();
         setLoginInProgress(true);        
 
-        await signIn('credentials', {email, password});
+        await signIn('credentials', {email, password, callbackUrl: '/shop'});
         
         setLoginInProgress(false);
 
@@ -54,7 +54,8 @@ export default function Login(){
                 <div className='hidden lg:block lg:border-2 mr-6'></div>
                 <div className='text-3xl p-5 lg:p-0 flex-1'>
                     <h2 className='text-center mb-5'>Register</h2>
-                    <p className='text-sm text-justify'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+                    <p className='text-sm text-justify'>Registering for our service allows you to directly Contact
+                    the best seed sellers in Sri Lanka. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
                     <div className=' text-center'>
                         <Link href="/register"><button className='text-sm text-center register-btn w-[111px] h-[35px] rounded-[30px] my-4' >REGISTER</button></Link>
                     </div>

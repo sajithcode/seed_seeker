@@ -5,9 +5,9 @@ import './HeaderTwo.css';
 import { signOut, useSession } from 'next-auth/react';
 
 export default function HeaderTwo(){
-    const session = useSession();
+    const { data: session, status } = useSession();
     console.log(session);
-    const status = session.status;
+    console.log(status);
     
     return(
         <section className=' px-20 bg-primary flex  items-center justify-between'>
@@ -17,6 +17,11 @@ export default function HeaderTwo(){
             <div className='search hidden lg:block'>
                 <input  className='placeholder'  type="text" placeholder='Search of product'/>
             </div>
+            {status === 'loading' && (
+                <div className='text-white bg-colorThree rounded-full px-8 py-2'>
+                    <span>Loading...</span>
+                </div>
+            )}
             {status === 'authenticated' && (
                 <div className='text-white bg-colorThree rounded-full px-8 py-2'>
                     <button onClick={() => signOut()}>Logout</button>
